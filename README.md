@@ -30,3 +30,6 @@ $ npx prisma migrate dev
 - `Request` and `Response` handling is done by `Controllers`
 - All the logic to serve the use cases are handled by `Services`
 - Finally, `Models` serve as the persistence layer, acting as a bridge between database and application.
+
+### Post request success
+![](https://github.com/bijay-05/node-express-example/blob/main/images/create-post-request-success.png)
