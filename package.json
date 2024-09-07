@@ -1,9 +1,11 @@
 {
+  "type": "module",
   "name": "express-example",
   "version": "1.0.0",
   "description": "Learning to build REST APIs with ExpressJS in Node",
   "main": "index.js",
   "scripts": {
+    "run:dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
