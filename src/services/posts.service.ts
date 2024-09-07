@@ -14,14 +14,15 @@ export const getAllPosts = async(): Promise<{posts: IPost[]; message:string}> =>
     }
 }
 
-export const createPost = async(post: Omit<IPost, 'id'>): Promise<{createdPost: IPost; message: string} | undefined> => {
+export const createPost = async(post: Omit<IPost, 'id'>): Promise<{createdPost: IPost; message: string}> => {
     try {
         const createdPost = await PostsModel.create(post);
         return {
             createdPost,
             message: 'Post created successully'
-        }
+        }       
     } catch (error) {
         console.log('Error from createPost service: ', error);
+        throw error;
     }
 }
