@@ -20,3 +20,5 @@ class PostModel {
         return createdPost
     }
 }
+
+export default new PostModel();
