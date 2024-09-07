@@ -12,7 +12,7 @@ class PostModel {
         return allPosts
     }
 
-    async create(post: Omit<IPost, 'id'>): Promise<IPost> {
+    async create(post: Omit<IPost, 'id'|'createdOn'>): Promise<IPost> {
         const createdPost = await prisma.posts.create({
             data: post
         })

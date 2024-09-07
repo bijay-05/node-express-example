@@ -14,7 +14,7 @@ export const getAllPosts = async(): Promise<{posts: IPost[]; message:string}> =>
     }
 }
 
-export const createPost = async(post: Omit<IPost, 'id'>): Promise<{createdPost: IPost; message: string}> => {
+export const createPost = async(post: Omit<IPost, 'id'|'createdOn'>): Promise<{createdPost: IPost; message: string}> => {
     try {
         const createdPost = await PostsModel.create(post);
         return {
