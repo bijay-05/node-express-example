@@ -20,3 +20,13 @@ We will use `Prisma ORM` to create database schema and run migrations to migrate
 $ npx prisma init
 $ npx prisma migrate dev
 ```
+
+## Directory structure
+
+`index.ts`  => `Routes`  => `Controllers`  => `Services`  => `Models`
+
+- The request from client flows in above direction.
+- There are pre-defined routes with different HTTP verbs in `Routes`
+- `Request` and `Response` handling is done by `Controllers`
+- All the logic to serve the use cases are handled by `Services`
+- Finally, `Models` serve as the persistence layer, acting as a bridge between database and application.
